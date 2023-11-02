@@ -1,6 +1,6 @@
 import streamlit
 import pandas
-
+import requests
 
 streamlit.title('My Parents New Healthy Diner')
 
@@ -34,8 +34,9 @@ streamlit.dataframe(fruits_to_show)
 
 
 #create API to get fruityvice data
-import requests
+
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response)
 
 
+streamlit.header("Fruityvice Fruit Advice!")
